@@ -547,6 +547,30 @@ details p {
   font-size: 0.92rem;
 }
 
+.footer-extra-link {
+  display: block;
+  margin-top: 10px;
+}
+
+.requisites-page {
+  width: min(calc(100% - 32px), 960px);
+  margin-inline: auto;
+  padding-block: 64px;
+}
+
+.requisites-page h1 { font-size: 2.5rem; }
+.requisites-lead { max-width: 740px; color: var(--muted); }
+.requisites-section { padding-block: 32px; border-top: 1px solid var(--line); margin-top: 32px; }
+.requisites-section h2 { font-size: 1.5rem; overflow-wrap: anywhere; }
+.requisites-list { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); gap: 16px 24px; }
+.requisites-list dt { color: var(--muted); }
+.requisites-list dd { margin: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.account-number { color: var(--cyan-bright); font-weight: 700; }
+@media (max-width: 600px) {
+  .requisites-list { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .requisites-list dd { margin-bottom: 16px; }
+}
+
 .copyright {
   grid-column: 1 / -1;
   margin: 27px 0 0;
