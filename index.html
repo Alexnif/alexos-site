@@ -3,52 +3,197 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="AlexOS — цифровая среда управления домами.">
-    <title>AlexOS — цифровая среда управления домами</title>
+    <meta name="description" content="AlexOS - цифровой помощник для жителей и управляющих организаций.">
+    <title>AlexOS | Цифровой помощник для жителей</title>
+    <link rel="preload" as="image" href="assets/alexos-operator.webp">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="AlexOS, на главную">
+        <span>Alex</span><strong>OS</strong>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#residents">Жителям</a>
+        <a href="#news">Новости</a>
+        <a href="#about">О системе</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="header-link" href="#staff">Сотрудникам <span aria-hidden="true">&rarr;</span></a>
+    </header>
+
+    <main id="top">
       <section class="hero">
-        <img class="hero-image" src="assets/alexos-operator.webp" alt="Цифровой помощник AlexOS для жителей">
-        <div class="hero-shade"></div>
-        <header class="nav shell">
-          <a class="brand" href="/" aria-label="AlexOS"><b>A</b><span>AlexOS</span></a>
-          <a class="login" href="https://app.alexos.ru">Вход для сотрудников <span aria-hidden="true">→</span></a>
-        </header>
-        <div class="hero-content shell">
+        <div class="hero-copy">
           <p class="eyebrow">Цифровой помощник для жителей</p>
-          <h1>Дом, который<br>всегда на связи.</h1>
-          <p class="lead">AlexOS помогает жителям быстро сообщать о вопросах по дому, а управляющей организации — видеть обращения, историю и реальные задачи в одном цифровом контуре.</p>
-          <div class="hero-actions"><a class="button" href="https://app.alexos.ru">Открыть AlexOS <span aria-hidden="true">→</span></a><a class="hero-link" href="#capabilities">Как это работает</a></div>
+          <h1>Дом рядом.<br><span>Помощь понятна.</span></h1>
+          <p class="hero-description">
+            AlexOS помогает принять обращение, сохранить детали и передать вопрос в работу.
+            Житель видит понятный путь, а управляющая организация не теряет важное сообщение.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#residents">Как обратиться <span aria-hidden="true">&rarr;</span></a>
+            <a class="button button-quiet" href="#about">О возможностях</a>
+          </div>
+          <p class="hero-status"><span></span> Публичный сайт работает в тестовом режиме</p>
         </div>
-        <div class="hero-footer shell"><span>Для жителей, сотрудников и управляющих организаций</span><span class="status"><i></i> Система развивается в рабочем режиме</span></div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/alexos-operator.webp" alt="">
+          <div class="signal signal-one"></div>
+          <div class="signal signal-two"></div>
+          <div class="signal signal-three"></div>
+          <div class="visual-label visual-label-top">ОБРАЩЕНИЯ<br><small>В работе</small></div>
+          <div class="visual-label visual-label-bottom">ЖИТЕЛИ<br><small>На связи</small></div>
+        </div>
       </section>
 
-      <section class="intro shell" id="capabilities">
-        <div><p class="section-label">Один контур</p><h2>От сообщения жителя до управленческого решения</h2></div>
-        <p>Система связывает общение в мессенджерах, обращения, задачи, сведения по домам и расчётные данные. Искусственный интеллект помогает обрабатывать поток сообщений, а оператор контролирует важные решения.</p>
-      </section>
-
-      <section class="capabilities shell">
-        <article class="capability accent"><span class="icon">01</span><h3>Обращения жителей</h3><p>Сообщения из MAX и других каналов попадают в единую историю, где их можно увидеть, обработать и передать в работу.</p></article>
-        <article class="capability"><span class="icon">02</span><h3>AI-оператор</h3><p>Помогает распознавать тему обращения, учитывать контекст диалога и готовить проект ответа для контроля сотрудником.</p></article>
-        <article class="capability"><span class="icon">03</span><h3>Единый журнал</h3><p>Диалоги, задачи, вложения и действия сотрудника остаются в истории, а не теряются в десятках чатов.</p></article>
-        <article class="capability"><span class="icon">04</span><h3>Данные по дому</h3><p>Адреса, помещения, лицевые счета, начисления и задолженность ведутся с разграничением доступа к личной информации.</p></article>
-      </section>
-
-      <section class="flow shell">
-        <div class="flow-copy"><p class="section-label">Рабочий процесс</p><h2>Не просто чат-бот.<br>Рабочее место для команды.</h2><p>AlexOS не подменяет ответственность сотрудника. Он освобождает время от рутины: собирает сообщения, показывает контекст, фиксирует результат и помогает ничего не упустить.</p><a class="inline-link" href="https://app.alexos.ru">Перейти в рабочую систему <span aria-hidden="true">→</span></a></div>
-        <ol>
-          <li><span>01</span><div><strong>Сообщение поступает</strong><p>Житель пишет в привычный канал связи.</p></div></li>
-          <li><span>02</span><div><strong>Контекст собирается</strong><p>Система связывает сообщение с диалогом, адресом и историей обращения.</p></div></li>
-          <li><span>03</span><div><strong>Решение контролируется</strong><p>Оператор подтверждает ответ или вручную направляет задачу в работу.</p></div></li>
-          <li><span>04</span><div><strong>История сохраняется</strong><p>Результат и переписка остаются доступными для проверки.</p></div></li>
+      <section class="resident-path section" id="residents">
+        <div class="section-heading">
+          <p class="eyebrow">Для жителей</p>
+          <h2>Сообщить о проблеме без лишних кругов.</h2>
+          <p>Личное обращение в AlexOS помогает сразу зафиксировать главное и не потерять переписку.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>01</span>
+            <h3>Опишите ситуацию</h3>
+            <p>Напишите, что случилось. При необходимости приложите фотографию.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Укажите адрес</h3>
+            <p>Дом, подъезд и квартира помогают быстрее разобраться в конкретном вопросе.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Получите ответ</h3>
+            <p>Обращение сохраняется в системе и передается сотруднику для дальнейшей работы.</p>
+          </li>
         </ol>
       </section>
 
-      <section class="notice shell"><div class="notice-mark">✓</div><div><h2>Жителю не нужно разбираться, куда обращаться</h2><p>Написать в личные сообщения AlexOS, указать адрес и описать вопрос. Система подскажет следующий шаг и передаст обращение в работу.</p></div><ul><li>Личная информация не публикуется в общих чатах</li><li>Сотрудник контролирует значимые ответы</li></ul></section>
+      <section class="emergency" aria-labelledby="emergency-title">
+        <div>
+          <p class="eyebrow">Важно</p>
+          <h2 id="emergency-title">Аварийная ситуация</h2>
+          <p>При непосредственной угрозе жизни, пожаре, запахе газа или другом происшествии сначала звоните в экстренные службы.</p>
+        </div>
+        <div class="emergency-actions">
+          <a class="emergency-number" href="tel:112">112 <span>единый номер</span></a>
+          <a class="emergency-number secondary" href="tel:+79331930912">+7 933 193-09-12 <span>диспетчерская</span></a>
+        </div>
+      </section>
+
+      <section class="capabilities section" id="about">
+        <div class="section-heading narrow">
+          <p class="eyebrow">О системе</p>
+          <h2>Единая история вместо потерянных сообщений.</h2>
+          <p>AlexOS развивается как рабочая среда для общения с жителями, учета обращений и проверки расчетной информации.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card">
+            <p class="card-number">01</p>
+            <h3>Обращения жителей</h3>
+            <p>Сообщения, фотографии и уточнения остаются в истории диалога, а не исчезают в общем потоке.</p>
+          </article>
+          <article class="capability-card">
+            <p class="card-number">02</p>
+            <h3>Понятный контекст</h3>
+            <p>Сотрудник видит предыдущую переписку и может продолжить разговор по существу.</p>
+          </article>
+          <article class="capability-card">
+            <p class="card-number">03</p>
+            <h3>Работа с задачами</h3>
+            <p>Важные обращения формируют общий пул для контроля и ручного распределения исполнителям.</p>
+          </article>
+          <article class="capability-card">
+            <p class="card-number">04</p>
+            <h3>Расчетная информация</h3>
+            <p>Система готовится к безопасной синхронизации начислений и оплат с учетной программой.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="news section" id="news">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="eyebrow">Новости</p>
+            <h2>Что происходит сейчас</h2>
+          </div>
+          <p>Публичная часть AlexOS будет постепенно дополняться полезной для жителей информацией.</p>
+        </div>
+        <div class="news-grid">
+          <article class="news-card">
+            <p class="news-date">Сейчас</p>
+            <h3>AlexOS проходит тестирование</h3>
+            <p>Проверяем путь обращения от личного сообщения до работы сотрудника и ответа жителю.</p>
+          </article>
+          <article class="news-card">
+            <p class="news-date">Совет</p>
+            <h3>Адрес помогает быстрее</h3>
+            <p>Для вопроса по конкретному дому сразу укажите улицу, номер дома, подъезд и квартиру.</p>
+          </article>
+          <article class="news-card">
+            <p class="news-date">В разработке</p>
+            <h3>Онлайн-оплата</h3>
+            <p>Готовим удобный и понятный способ получать сведения о начислениях и переходить к оплате.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq section" aria-labelledby="faq-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Вопросы и ответы</p>
+          <h2 id="faq-title">Коротко о главном</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Как направить обращение?</summary>
+            <p>Напишите в личный чат AlexOS в MAX. Если чат недоступен или ситуация срочная, свяжитесь с диспетчерской по телефону.</p>
+          </details>
+          <details>
+            <summary>Нужна ли фотография?</summary>
+            <p>Не всегда, но она помогает увидеть проблему без лишних уточнений: например, протечку, повреждение или препятствие в проходе.</p>
+          </details>
+          <details>
+            <summary>Можно узнать задолженность или начисления?</summary>
+            <p>Такая информация относится к лицевому счету и сообщается только в личном диалоге после проверки данных по адресу.</p>
+          </details>
+          <details>
+            <summary>Когда появится оплата?</summary>
+            <p>Платежный контур готовится. До его подключения реквизиты и способы оплаты будут сообщаться в привычном порядке.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="staff" id="staff">
+        <div>
+          <p class="eyebrow">Для сотрудников</p>
+          <h2>Рабочая система готовится к подключению.</h2>
+          <p>Доступ к внутренним разделам предоставляется сотрудникам по ролям. Публичный сайт не содержит данных жителей и не является входом в рабочую систему.</p>
+        </div>
+        <a class="button button-quiet" href="#contacts">Связаться по доступу</a>
+      </section>
     </main>
-    <footer class="footer shell"><a class="brand footer-brand" href="/"><b>A</b><span>AlexOS</span></a><span>Цифровая среда управления домами</span><a href="https://app.alexos.ru">Вход для сотрудников</a></footer>
+
+    <footer class="site-footer" id="contacts">
+      <div class="footer-brand">
+        <a class="brand" href="#top"><span>Alex</span><strong>OS</strong></a>
+        <p>Цифровой помощник для спокойной и понятной работы с домом.</p>
+      </div>
+      <div>
+        <p class="footer-label">Диспетчерская</p>
+        <a href="tel:+79331930912">+7 933 193-09-12</a>
+      </div>
+      <div>
+        <p class="footer-label">Экстренная помощь</p>
+        <a href="tel:112">112</a>
+      </div>
+      <div>
+        <p class="footer-label">Информация</p>
+        <a href="privacy.html">Конфиденциальность</a>
+      </div>
+      <p class="copyright">&copy; 2026 AlexOS. Публичный сайт находится в тестовом режиме.</p>
+    </footer>
   </body>
 </html>
