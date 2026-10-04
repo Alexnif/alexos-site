@@ -45,7 +45,6 @@ a {
 }
 
 .site-header,
-.hero,
 .section,
 .emergency,
 .staff,
@@ -101,12 +100,37 @@ a {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
-  gap: 22px;
-  min-height: 640px;
+  position: relative;
+  display: flex;
+  min-height: min(650px, 78svh);
   align-items: center;
-  padding-block: 66px 72px;
+  padding: 64px max(24px, calc((100% - var(--max-width)) / 2));
+  background: #08152c url("assets/alexos-hero-dispatcher.png") center right / cover no-repeat;
+  isolation: isolate;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: linear-gradient(90deg, rgba(5, 10, 23, 0.88), rgba(5, 10, 23, 0.65) 38%, transparent 67%);
+}
+
+.hero-copy {
+  width: min(46%, 530px);
+}
+
+.hero h1 {
+  margin-bottom: 18px;
+  font-size: 5.5rem;
+}
+
+.hero-subtitle {
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  font-weight: 650;
+  line-height: 1.3;
 }
 
 .eyebrow {
@@ -114,7 +138,7 @@ a {
   color: var(--cyan-bright);
   font-size: 0.77rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -134,7 +158,7 @@ h3 {
 h1 {
   max-width: 620px;
   margin-bottom: 22px;
-  font-size: clamp(3rem, 6vw, 5.45rem);
+  font-size: 4rem;
   letter-spacing: 0;
 }
 
@@ -210,99 +234,6 @@ h1 span {
   box-shadow: 0 0 0 5px rgba(101, 223, 181, 0.12);
 }
 
-.hero-visual {
-  position: relative;
-  aspect-ratio: 16 / 10;
-  min-height: 0;
-  overflow: hidden;
-  border: 1px solid rgba(95, 190, 255, 0.35);
-  border-radius: 8px;
-  background: #071325;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.38), inset 0 0 72px rgba(15, 119, 220, 0.14);
-}
-
-.hero-visual::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: linear-gradient(180deg, rgba(3, 10, 24, 0.04) 20%, rgba(3, 10, 24, 0.58) 100%);
-  pointer-events: none;
-}
-
-.hero-visual img {
-  position: absolute;
-  width: 100%;
-  min-width: 0;
-  max-width: none;
-  left: 0;
-  top: 0;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  filter: saturate(1.05) contrast(1.04);
-}
-
-.signal {
-  position: absolute;
-  z-index: 1;
-  border: 1px solid rgba(103, 215, 255, 0.45);
-  border-radius: 50%;
-  box-shadow: inset 0 0 30px rgba(52, 184, 255, 0.12), 0 0 24px rgba(52, 184, 255, 0.14);
-}
-
-.signal-one {
-  width: 280px;
-  height: 280px;
-  bottom: -128px;
-  left: 48%;
-}
-
-.signal-two {
-  width: 220px;
-  height: 220px;
-  bottom: -100px;
-  left: 54%;
-}
-
-.signal-three {
-  width: 158px;
-  height: 158px;
-  bottom: -70px;
-  left: 60%;
-}
-
-.visual-label {
-  position: absolute;
-  z-index: 2;
-  padding: 10px 14px;
-  border: 1px solid rgba(108, 218, 255, 0.46);
-  border-radius: 5px;
-  color: #f1fbff;
-  background: rgba(5, 28, 55, 0.74);
-  box-shadow: 0 0 22px rgba(26, 156, 247, 0.12);
-  font-size: 0.69rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  line-height: 1.4;
-}
-
-.visual-label small {
-  color: var(--cyan-bright);
-  font-size: 0.67rem;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.visual-label-top {
-  top: 11%;
-  left: 8%;
-}
-
-.visual-label-bottom {
-  right: 7%;
-  bottom: 12%;
-}
-
 .section {
   padding-block: 88px;
 }
@@ -319,7 +250,7 @@ h1 span {
 .emergency h2,
 .staff h2 {
   margin-bottom: 16px;
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: 2.75rem;
   letter-spacing: 0;
 }
 
@@ -368,7 +299,7 @@ h1 span {
   color: var(--cyan-bright);
   font-size: 0.76rem;
   font-weight: 750;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -436,7 +367,7 @@ h1 span {
   color: #e3caa5;
   font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -595,7 +526,7 @@ details p {
   color: #dceaff;
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -614,6 +545,8 @@ details p {
 }
 
 .privacy-page {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin-inline: auto;
   display: grid;
   grid-template-columns: minmax(0, 700px) minmax(180px, 1fr);
   gap: 64px;
@@ -623,7 +556,7 @@ details p {
 
 .privacy-page h1 {
   margin-bottom: 25px;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: 3.5rem;
 }
 
 .privacy-page h2 {
@@ -655,21 +588,36 @@ details p {
 @media (max-width: 920px) {
   .site-header {
     grid-template-columns: 1fr auto;
+    padding-block: 16px;
+    row-gap: 16px;
   }
 
   .site-nav {
-    display: none;
+    grid-row: 2;
+    grid-column: 1 / -1;
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    white-space: nowrap;
   }
 
   .hero {
-    grid-template-columns: 1fr;
-    min-height: 0;
-    padding-top: 58px;
+    min-height: 620px;
+    background-position: 62% center;
   }
 
-  .hero-visual {
-    aspect-ratio: 16 / 9;
+  .hero-copy {
+    width: 49%;
   }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
 
   .capability-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -688,7 +636,6 @@ details p {
 
 @media (max-width: 680px) {
   .site-header,
-  .hero,
   .section,
   .emergency,
   .staff,
@@ -705,33 +652,57 @@ details p {
   }
 
   .hero {
-    padding-block: 45px 58px;
+    align-items: end;
+    min-height: 0;
+    padding: 235px 16px 32px;
+    background-size: auto 280px;
+    background-position: 75% top;
+  }
+
+  .hero::before {
+    background: linear-gradient(180deg, transparent 130px, #08152c 275px);
+  }
+
+  .hero-copy {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 3.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-status {
+    font-size: 0.75rem;
+  }
+
+  .privacy-page {
+    width: calc(100% - 32px);
   }
 
   .hero-description {
     font-size: 0.98rem;
   }
 
-  .hero-visual {
-    aspect-ratio: 16 / 9;
-  }
 
-  .hero-visual img {
-    min-width: 0;
-    width: 100%;
-    left: 0;
-  }
 
-  .visual-label-top {
-    left: 5%;
-  }
 
-  .visual-label-bottom {
-    right: 5%;
-  }
 
   .section {
     padding-block: 62px;
+  }
+
+  .section-heading h2,
+  .emergency h2,
+  .staff h2 {
+    font-size: 2rem;
+  }
+
+  .privacy-page h1 {
+    font-size: 2.5rem;
   }
 
   .steps,
@@ -785,5 +756,20 @@ details p {
   .privacy-page {
     min-height: auto;
     padding-block: 55px;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan-bright);
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition: none !important;
   }
 }
