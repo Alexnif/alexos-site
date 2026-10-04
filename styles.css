@@ -212,7 +212,8 @@ h1 span {
 
 .hero-visual {
   position: relative;
-  min-height: 500px;
+  aspect-ratio: 16 / 10;
+  min-height: 0;
   overflow: hidden;
   border: 1px solid rgba(95, 190, 255, 0.35);
   border-radius: 8px;
@@ -230,14 +231,14 @@ h1 span {
 
 .hero-visual img {
   position: absolute;
-  width: 118%;
-  min-width: 680px;
+  width: 100%;
+  min-width: 0;
   max-width: none;
-  left: -8%;
-  top: -8%;
-  height: 112%;
-  object-fit: cover;
-  object-position: 51% 42%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
   filter: saturate(1.05) contrast(1.04);
 }
 
@@ -667,7 +668,7 @@ details p {
   }
 
   .hero-visual {
-    min-height: 460px;
+    aspect-ratio: 16 / 9;
   }
 
   .capability-grid {
@@ -712,13 +713,13 @@ details p {
   }
 
   .hero-visual {
-    min-height: 380px;
+    aspect-ratio: 16 / 9;
   }
 
   .hero-visual img {
-    min-width: 530px;
-    width: 145%;
-    left: -27%;
+    min-width: 0;
+    width: 100%;
+    left: 0;
   }
 
   .visual-label-top {
