@@ -7,6 +7,7 @@
     <title>AlexOS | Цифровой помощник для жителей</title>
     <link rel="preload" as="image" href="assets/alexos-hero-future.png">
     <link rel="stylesheet" href="styles.css">
+    <script src="statistics.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -39,6 +40,22 @@
             <a class="button button-quiet" href="#about">О возможностях</a>
           </div>
           <p class="hero-status"><span></span> Публичный сайт работает в тестовом режиме</p>
+        </div>
+      </section>
+
+      <section class="statistics-band" aria-labelledby="statistics-title">
+        <div class="statistics-inner">
+          <div class="statistics-heading">
+            <div><p class="eyebrow">AlexOS в цифрах</p><h2 id="statistics-title">Единый адресный справочник</h2></div>
+            <p class="statistics-date">Данные на <time id="statistics-date" datetime="2026-10-05T09:14:51+00:00">5 октября 2026</time></p>
+          </div>
+          <dl class="statistics-grid">
+            <div><dt>Населённых пунктов</dt><dd data-stat="localities">8</dd></div>
+            <div><dt>Улиц в справочнике</dt><dd data-stat="streets">214</dd></div>
+            <div><dt>Домов в справочнике</dt><dd data-stat="houses">1&nbsp;342</dd></div>
+            <div><dt>Лицевых счетов в базе</dt><dd data-stat="accounts">2&nbsp;990</dd></div>
+          </dl>
+          <p class="statistics-note">Справочник включает исторические адреса и лицевые счета. Эти показатели не означают количество домов в управлении или жителей, подключённых к боту.</p>
         </div>
       </section>
 
