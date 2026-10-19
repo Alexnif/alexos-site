@@ -964,3 +964,9 @@ details p {
     transition: none !important;
   }
 }
+
+/* Public training entry in the staff section. */
+.staff-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; flex-shrink: 0; }
+.staff .staff-actions { max-width: 320px; }
+.staff-actions .button { justify-content: center; white-space: normal; text-align: center; }
+@media (max-width: 640px) { .staff .staff-actions { max-width: 100%; width: 100%; } }
