@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Подтверждение входа | AlexOS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://st.max.ru/js/max-web-app.js" defer></script>
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <a class="brand" href="https://alexos.ru/">Alex<span>OS</span></a>
+    <h1>Вход сотрудника</h1>
+    <p id="status" role="status">Проверяем запрос MAX…</p>
+    <section id="request" hidden>
+      <dl><dt>Сотрудник</dt><dd id="person"></dd><dt>Запрос на компьютере</dt><dd id="label"></dd></dl>
+      <p>Подтверждайте только вход, который вы начали сами. Номер запроса должен совпадать с номером на вашем компьютере.</p>
+      <button id="confirm" type="button">Подтвердить вход</button>
+    </section>
+  </main>
+</body>
+</html>
