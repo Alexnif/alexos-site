@@ -3,7 +3,28 @@
   const status = document.getElementById("status");
   const request = document.getElementById("request");
   const button = document.getElementById("confirm");
-  const fail = message => {status.textContent = message; request.hidden = true;};
+  const intro = document.getElementById("intro");
+  const heading = document.getElementById("heading");
+  const fail = message => {status.textContent = message; request.hidden = true; intro.hidden = false;};
+  const initData = window.WebApp?.initData;
+  // This only chooses the screen. The server still verifies the signed launch.
+  let start;
+  try {
+    const values = new URLSearchParams(initData || "");
+    if (values.getAll("start_param").length > 1) {
+      fail("Ссылка входа недействительна. Отсканируйте новый QR в рабочем кабинете.");
+      return;
+    }
+    if (values.getAll("start_param").length === 1) start = values.get("start_param");
+  } catch (_) {return;}
+  if (!start) return;
+  if (!/^login_[0-9a-f]{32}_[A-Za-z0-9_-]{43}$/.test(start)) {
+    fail("Ссылка входа недействительна. Если вы сотрудник, отсканируйте новый QR в рабочем кабинете. Жители могут написать боту без входа здесь.");
+    return;
+  }
+  intro.hidden = true;
+  heading.textContent = "Вход сотрудника";
+  status.textContent = "Проверяем запрос MAX…";
   const config = window.ALEXOS_MAX_AUTH;
   if (!config?.enabled || !config.apiBase) {
     fail("Вход по QR пока не подключён. Используйте вход по коду в рабочем кабинете.");
@@ -14,8 +35,6 @@
     base = new URL(config.apiBase);
     if (base.protocol !== "https:" || base.username || base.password || base.search || base.hash) throw new Error();
   } catch (_) {fail("Сервис подтверждения не настроен."); return;}
-  const initData = window.WebApp?.initData;
-  if (!initData) {fail("Откройте эту страницу через QR рабочего кабинета в приложении MAX."); return;}
   const call = async (path, extra = {}) => {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 15000);
