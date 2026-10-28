@@ -27,7 +27,7 @@
   status.textContent = "Проверяем запрос MAX…";
   const config = window.ALEXOS_MAX_AUTH;
   if (!config?.enabled || !config.apiBase) {
-    fail("Вход по QR пока не подключён. Используйте вход по коду в рабочем кабинете.");
+    fail("Переносим подтверждение входа на новый сервер. Пока используйте вход по коду в рабочем кабинете.");
     return;
   }
   let base;
