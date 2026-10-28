@@ -1,4 +1,4 @@
 window.ALEXOS_MAX_AUTH = Object.freeze({
-  enabled: false,
-  apiBase: "",
+  enabled: true,
+  apiBase: "https://auth.alexos.ru",
 });
