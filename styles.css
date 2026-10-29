@@ -305,6 +305,7 @@ h1 span {
 
 .steps h3,
 .capability-card h3,
+.capability-card h4,
 .news-card h3 {
   margin: 28px 0 11px;
   font-size: 1.25rem;
@@ -413,6 +414,69 @@ h1 span {
 
 .capability-card h3 {
   margin-top: 31px;
+}
+
+.capability-audience {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.3fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: baseline;
+  margin-top: 40px;
+}
+
+.capability-audience h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.capability-audience p {
+  max-width: 700px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.capability-audience + .capability-grid {
+  margin-top: 22px;
+}
+
+.capability-card h4 {
+  margin-top: 22px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.capability-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.capability-notes h3 {
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.capability-notes p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+@media (max-width: 680px) {
+  .capability-audience,
+  .capability-notes {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .capability-notes {
+    gap: 26px;
+  }
 }
 
 .news {
