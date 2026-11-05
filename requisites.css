@@ -1,0 +1,31 @@
+.requisites-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.requisites-actions button { font:inherit; cursor:pointer; }
+.requisites-actions [hidden], .copy-field[hidden] { display:none; }
+.copy-status { min-height:1.6em; color:var(--cyan-bright); margin:16px 0 0; }
+.requisites-data { margin:0; }
+.requisite-row { display:grid; grid-template-columns:minmax(0,220px) minmax(0,1fr); gap:16px 28px; padding:18px 0; border-bottom:1px solid var(--line); }
+.requisite-row dt { color:var(--muted); }
+.requisite-row dd { margin:0; display:flex; align-items:flex-start; gap:20px; justify-content:space-between; min-width:0; }
+.requisite-value { overflow-wrap:anywhere; font-variant-numeric:tabular-nums; user-select:text; }
+.copy-field { flex-shrink:0; min-height:36px; border:1px solid var(--line); border-radius:8px; padding:6px 10px; background:transparent; color:var(--cyan-bright); cursor:pointer; font:inherit; font-size:.8rem; }
+.copy-field:hover { background:rgba(52,184,255,.1); }
+.copy-field:focus-visible, .requisites-actions :focus-visible { outline:2px solid var(--cyan-bright); outline-offset:4px; }
+.requisites-note, .requisites-updated { color:var(--muted); }
+.requisites-updated { font-size:.85rem; }
+.requisites-footer { grid-template-columns:1fr 1fr; }
+@media(max-width:600px) {
+ .requisites-page { padding-block:32px; }
+ .requisite-row { grid-template-columns:1fr; gap:8px; }
+ .requisite-row dd { gap:12px; }
+ .copy-field { font-size:.75rem; }
+ .requisites-actions .button { width:100%; justify-content:center; }
+}
+@media print {
+ body, body::before { background:white!important; color:black!important; }
+ .site-header, .site-footer, .requisites-actions, .copy-field, .copy-status, .eyebrow { display:none!important; }
+ .requisites-page { width:100%; padding:0; }
+ .requisites-page h1 { font-size:22pt; }
+ .requisite-row { break-inside:avoid; padding:10px 0; border-color:#ddd; }
+ .requisite-row dt, .requisites-lead, .requisites-note, .requisites-updated { color:#333; }
+ .requisites-section { padding-top:12px; margin-top:12px; }
+}
