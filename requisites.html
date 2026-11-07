@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Реквизиты ИП Нифонтова Александра Виссарионовича и ООО «РСП».">
-    <title>Реквизиты | AlexOS</title>
+    <meta name="description" content="Реквизиты ИП Нифонтова Александра Виссарионовича для договоров и счетов. Копирование отдельных полей и всей карточки.">
+    <title>Реквизиты ИП Нифонтова | AlexOS</title>
+    <link rel="canonical" href="https://alexos.ru/requisites.html">
+    <script src="requisites.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="requisites.css">
   </head>
   <body>
     <header class="site-header">
@@ -19,47 +22,39 @@
       <a class="header-link" href="index.html">На главную <span aria-hidden="true">&larr;</span></a>
     </header>
     <main class="requisites-page">
-      <p class="eyebrow">Получатели платежей</p>
-      <h1>Реквизиты</h1>
-      <p class="requisites-lead">Перед оплатой сверяйте получателя и расчётный счёт с вашей квитанцией или договором. ИП и ООО «РСП» — разные получатели платежей.</p>
+      <p class="eyebrow">Для договоров и счетов</p>
+      <h1>Реквизиты ИП</h1>
+      <p class="requisites-lead">Индивидуальный предприниматель Нифонтов Александр Виссарионович. Скопируйте нужное поле или всю карточку для подготовки документа.</p>
+      <div class="requisites-actions">
+        <button type="button" class="button button-primary" id="copy-all" hidden>Скопировать все реквизиты</button>
+        <a class="button button-quiet" href="requisites-ip.txt" download>Скачать карточку .txt</a>
+        <button type="button" class="button button-quiet" id="print-requisites" hidden>Распечатать</button>
+      </div>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
       <section class="requisites-section" aria-labelledby="ip-title">
         <h2 id="ip-title">ИП Нифонтов Александр Виссарионович</h2>
-        <dl class="requisites-list">
-          <dt>ИНН</dt><dd>424700050840</dd>
-          <dt>ОГРНИП</dt><dd>326420500115657</dd>
-          <dt>Расчётный счёт</dt><dd class="account-number">40802810626710012920</dd>
-          <dt>Банк</dt><dd>Кемеровское отделение № 8615 ПАО Сбербанк</dd>
-          <dt>БИК</dt><dd>043207612</dd>
-          <dt>Корреспондентский счёт</dt><dd>30101810200000000612</dd>
-          <dt>ИНН банка</dt><dd>7707083893</dd>
-          <dt>КПП банка</dt><dd>420502002</dd>
+        <dl class="requisites-data">
+          <div class="requisite-row"><dt>Полное наименование</dt><dd><span id="requisite-0" class="requisite-value">Индивидуальный предприниматель Нифонтов Александр Виссарионович</span><button type="button" class="copy-field" data-copy="requisite-0" aria-label="Скопировать: Полное наименование" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>Краткое наименование</dt><dd><span id="requisite-1" class="requisite-value">ИП Нифонтов А. В.</span><button type="button" class="copy-field" data-copy="requisite-1" aria-label="Скопировать: Краткое наименование" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>ИНН</dt><dd><span id="requisite-2" class="requisite-value">424700050840</span><button type="button" class="copy-field" data-copy="requisite-2" aria-label="Скопировать: ИНН" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>ОГРНИП</dt><dd><span id="requisite-3" class="requisite-value">326420500115657</span><button type="button" class="copy-field" data-copy="requisite-3" aria-label="Скопировать: ОГРНИП" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>КПП ИП</dt><dd><span id="requisite-4" class="requisite-value">Не присваивается</span><button type="button" class="copy-field" data-copy="requisite-4" aria-label="Скопировать: КПП ИП" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>Адрес регистрации</dt><dd><span id="requisite-5" class="requisite-value">652010, Кемеровская область — Кузбасс, Яшкинский муниципальный округ, пгт Яшкино, ул. Дачная, д. 2А</span><button type="button" class="copy-field" data-copy="requisite-5" aria-label="Скопировать: Адрес регистрации" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>Расчётный счёт</dt><dd><span id="requisite-6" class="requisite-value">40802810626710012920</span><button type="button" class="copy-field" data-copy="requisite-6" aria-label="Скопировать: Расчётный счёт" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>Банк</dt><dd><span id="requisite-7" class="requisite-value">Кемеровское отделение № 8615 ПАО Сбербанк</span><button type="button" class="copy-field" data-copy="requisite-7" aria-label="Скопировать: Банк" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>БИК</dt><dd><span id="requisite-8" class="requisite-value">043207612</span><button type="button" class="copy-field" data-copy="requisite-8" aria-label="Скопировать: БИК" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>Корреспондентский счёт</dt><dd><span id="requisite-9" class="requisite-value">30101810200000000612</span><button type="button" class="copy-field" data-copy="requisite-9" aria-label="Скопировать: Корреспондентский счёт" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>ИНН банка</dt><dd><span id="requisite-10" class="requisite-value">7707083893</span><button type="button" class="copy-field" data-copy="requisite-10" aria-label="Скопировать: ИНН банка" hidden>Копировать</button></dd></div>
+          <div class="requisite-row"><dt>КПП банка</dt><dd><span id="requisite-11" class="requisite-value">420502002</span><button type="button" class="copy-field" data-copy="requisite-11" aria-label="Скопировать: КПП банка" hidden>Копировать</button></dd></div>
         </dl>
       </section>
-      <section class="requisites-section" aria-labelledby="rsp-title">
-        <h2 id="rsp-title">ООО «РСП»</h2>
-        <dl class="requisites-list">
-          <dt>ИНН</dt><dd>4246008141</dd>
-          <dt>КПП организации</dt><dd>424601001</dd>
-          <dt>Расчётный счёт</dt><dd class="account-number">40702810226130110122</dd>
-          <dt>Банк</dt><dd>Кемеровское отделение № 8615 ПАО Сбербанк, г. Кемерово</dd>
-          <dt>БИК</dt><dd>043207612</dd>
-          <dt>Корреспондентский счёт</dt><dd>30101810200000000612</dd>
-          <dt>Юридический / почтовый адрес</dt><dd>652010, Кемеровская обл., Яшкинский р-н, пгт Яшкино, ул. Гагарина, д. 33к</dd>
-          <dt>Телефон</dt><dd><a href="tel:+73845521035">8 (38455) 2-10-35</a></dd>
-          <dt>Руководитель</dt><dd>Петухов В. Г.</dd>
-        </dl>
-      </section>
+      <p class="requisites-note">Перед оплатой сверьте получателя и расчётный счёт с договором или счётом на оплату.</p>
+      <p class="requisites-updated">Обновлено 5 ноября 2026 года</p>
     </main>
-    <footer class="site-footer">
-      <div class="footer-brand">
-        <a class="brand" href="index.html"><span>Alex</span><strong>OS</strong></a>
-        <p>Цифровой помощник для спокойной и понятной работы с домом.</p>
-      </div>
-      <div><p class="footer-label">Диспетчерская</p><a href="tel:+79331930912">+7 933 193-09-12</a></div>
-      <div><p class="footer-label">Обращения</p><a href="https://max.ru/id4246008141_bot" target="_blank" rel="noopener">Написать в MAX</a></div>
-      <div><p class="footer-label">Экстренная помощь</p><a href="tel:112">112</a></div>
+    <footer class="site-footer requisites-footer">
+      <div class="footer-brand"><a class="brand" href="index.html"><span>Alex</span><strong>OS</strong></a><p>ИТ и автоматизация • Консалтинг</p></div>
       <div><p class="footer-label">Информация</p><a href="privacy.html">Конфиденциальность</a></div>
-      <p class="copyright">&copy; 2026 AlexOS. Публичный сайт находится в тестовом режиме.</p>
+      <p class="copyright">&copy; 2026 AlexOS</p>
     </footer>
   </body>
 </html>
