@@ -4,6 +4,13 @@ Static public landing page for `alexos.ru`.
 
 It contains no application code, database connection, resident data, or API credentials.
 
+## Public-site analytics
+
+Yandex Metrica is loaded only after an explicit visitor choice on the public
+content pages. The consent choice is stored in localStorage. The MAX mini-app
+entry page and local-only qualification quiz are intentionally excluded. Keep
+the privacy page in sync if analytics settings or collected data change.
+
 ## Qualification quiz
 
 `quiz.html` is a browser-local training tool linked from the staff section.
