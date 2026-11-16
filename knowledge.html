@@ -16,6 +16,7 @@
       <a class="brand" href="index.html" aria-label="AlexOS, на главную"><span>Alex</span><strong>OS</strong></a>
       <nav class="site-nav" aria-label="Основная навигация">
         <a href="residents.html">Как обратиться</a>
+        <a href="basics.html">ЖКХ просто</a>
         <a href="knowledge.html" aria-current="page">База знаний</a>
         <a href="updates.html">История изменений</a>
         <a href="index.html#about">Возможности</a>
@@ -29,7 +30,7 @@
       <header class="knowledge-intro">
         <p class="eyebrow">AlexOS Wiki</p>
         <h1>База знаний по управлению домами</h1>
-        <p>Единый навигатор по законодательству и рабочим процессам: от содержания дома и обращений жителей до ГИС ЖКХ, защиты данных и приёма платежей.</p>
+        <p>Единый навигатор по федеральным, региональным и местным правилам: от содержания дома и обращений жителей до отходов, ГИС ЖКХ, защиты данных и приёма платежей.</p>
         <div class="knowledge-status">
           <span>Первая редакция</span>
           <time datetime="2026-11-16">Проверено 16 ноября 2026</time>
@@ -47,9 +48,11 @@
           <button type="button" data-filter="residents">Жители</button>
           <button type="button" data-filter="data">Данные и ГИС</button>
           <button type="button" data-filter="payments">Платежи</button>
+          <button type="button" data-filter="waste">Отходы</button>
+          <button type="button" data-filter="local">Местные правила</button>
           <button type="button" data-filter="control">Контроль</button>
         </div>
-        <p class="knowledge-result" id="knowledge-result" aria-live="polite">Показано 11 документов</p>
+        <p class="knowledge-result" id="knowledge-result" aria-live="polite">Показано 16 документов</p>
       </section>
 
       <section class="knowledge-layout" aria-label="Документы и пояснения">
@@ -156,12 +159,53 @@
             <dl><div><dt>В AlexOS</dt><dd>Реестр проверок, поручения, доказательства выполнения и контроль сроков.</dd></div></dl>
             <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_358750/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
           </article>
+
+          <article class="law-entry" data-category="local management residents" data-search="яшкино яшкинский 425-р местные правила благоустройство территория уборка снег фасад земляные работы">
+            <div class="law-entry-head"><span>Яшкинский округ</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Правила благоустройства Яшкинского муниципального округа</h2>
+            <p>Решение Совета народных депутатов от 30.06.2023 № 425-р регулирует содержание территорий и элементов благоустройства, уборку, озеленение, внешний вид, земляные работы и восстановление нарушенного благоустройства.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Заявки по территории, сезонные работы, фотофиксация, задания исполнителям и контроль восстановления.</dd></div></dl>
+            <div class="law-links"><a href="https://xn--80aiy.xn--h1adke3au2c.xn--p1ai/index.php/komitet/reshenie-ot-30-iyunya-2023-g-no-425-r" target="_blank" rel="noopener noreferrer">Официальный текст округа</a></div>
+          </article>
+
+          <article class="law-entry" data-category="local control" data-search="яшкино муниципальный контроль благоустройство проверка профилактика 296-р 126-р">
+            <div class="law-entry-head"><span>Муниципальный контроль</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Контроль за соблюдением правил благоустройства</h2>
+            <p>Официальный раздел округа объединяет положение о муниципальном контроле, действующие изменения, программы профилактики и проверочные материалы.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Реестр замечаний, основания проверки, поручения, доказательства устранения и сроки.</dd></div></dl>
+            <div class="law-links"><a href="https://xn--80aiy.xn--h1adke3au2c.xn--p1ai/index.php/munitsipalnyj-kontrol/munitsipalnyj-kontrol-za-soblyudeniem-pravil-blagoustrojstva-territorii" target="_blank" rel="noopener noreferrer">Раздел администрации</a></div>
+          </article>
+
+          <article class="law-entry" data-category="waste residents management" data-search="89-фз отходы тко мусор накопление региональный оператор">
+            <div class="law-entry-head"><span>Отходы</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Федеральный закон № 89-ФЗ об отходах</h2>
+            <p>Базовый закон об обращении с отходами производства и потребления, включая полномочия участников системы и организацию обращения с твёрдыми коммунальными отходами.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Классификация обращений по мусору, разграничение исполнителей и контроль заявок по площадкам.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_19109/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="waste residents management" data-search="293 правила тко отходы контейнер площадка крупногабаритный мусор договор региональный оператор">
+            <div class="law-entry-head"><span>Правила обращения с ТКО</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Порядок обращения с ТКО, постановление № 293</h2>
+            <p>Действующие с 1 сентября 2025 года правила накопления, транспортирования и обработки ТКО, а также форма типового договора с региональным оператором. Они заменили прежние правила № 1156.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Памятки жителям, обращения по вывозу, тип места накопления и фиксация нарушения.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_500887/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="waste local management" data-search="кузбасс кемеровская область территориальная схема отходы тко север яшкино региональный оператор">
+            <div class="law-entry-head"><span>Кузбасс</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Территориальная схема обращения с отходами Кузбасса</h2>
+            <p>Региональная схема описывает зоны деятельности операторов, места накопления, потоки отходов и инфраструктуру обращения с отходами в Кемеровской области.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Справочник ответственных организаций и маршрутизация обращений, которые не относятся к управлению домом.</dd></div></dl>
+            <div class="law-links"><a href="https://kuzbasseco.ru/obrashhenie-s-otxodami/" target="_blank" rel="noopener noreferrer">Министерство природных ресурсов Кузбасса</a></div>
+          </article>
         </div>
       </section>
 
       <section class="knowledge-next" aria-labelledby="knowledge-next-title">
         <div><p class="eyebrow">Связанные разделы</p><h2 id="knowledge-next-title">Не только читать, но и применять</h2></div>
         <div class="knowledge-actions">
+          <a href="basics.html">ЖКХ простыми словами <span aria-hidden="true">&rarr;</span></a>
           <a href="quiz.html">Квиз по законодательству <span aria-hidden="true">&rarr;</span></a>
           <a href="updates.html">История развития AlexOS <span aria-hidden="true">&rarr;</span></a>
           <a href="residents.html">Памятка для жителей <span aria-hidden="true">&rarr;</span></a>
