@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="База знаний AlexOS: жилищное законодательство, ГИС ЖКХ, обращения, персональные данные, касса и электронные документы.">
+    <title>База знаний | AlexOS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="knowledge.css">
+    <link rel="stylesheet" href="analytics-consent.css">
+    <script src="knowledge.js" defer></script>
+    <script src="metrika-consent.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AlexOS, на главную"><span>Alex</span><strong>OS</strong></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="residents.html">Как обратиться</a>
+        <a href="knowledge.html" aria-current="page">База знаний</a>
+        <a href="updates.html">История изменений</a>
+        <a href="index.html#about">Возможности</a>
+        <a href="index.html#contacts">Контакты</a>
+        <a href="requisites.html">Реквизиты</a>
+      </nav>
+      <a class="header-link" href="index.html">На главную <span aria-hidden="true">&larr;</span></a>
+    </header>
+
+    <main class="knowledge-page">
+      <header class="knowledge-intro">
+        <p class="eyebrow">AlexOS Wiki</p>
+        <h1>База знаний по управлению домами</h1>
+        <p>Единый навигатор по законодательству и рабочим процессам: от содержания дома и обращений жителей до ГИС ЖКХ, защиты данных и приёма платежей.</p>
+        <div class="knowledge-status">
+          <span>Первая редакция</span>
+          <time datetime="2026-11-16">Проверено 16 ноября 2026</time>
+        </div>
+      </header>
+
+      <section class="knowledge-tools" aria-label="Поиск и фильтры">
+        <label class="knowledge-search">
+          <span>Поиск по базе</span>
+          <input id="knowledge-search" type="search" placeholder="Например: ГИС ЖКХ, касса, обращение" autocomplete="off">
+        </label>
+        <div class="knowledge-tabs" role="group" aria-label="Темы базы знаний">
+          <button class="active" type="button" data-filter="all">Все</button>
+          <button type="button" data-filter="management">Управление МКД</button>
+          <button type="button" data-filter="residents">Жители</button>
+          <button type="button" data-filter="data">Данные и ГИС</button>
+          <button type="button" data-filter="payments">Платежи</button>
+          <button type="button" data-filter="control">Контроль</button>
+        </div>
+        <p class="knowledge-result" id="knowledge-result" aria-live="polite">Показано 11 документов</p>
+      </section>
+
+      <section class="knowledge-layout" aria-label="Документы и пояснения">
+        <aside class="knowledge-guide">
+          <p class="eyebrow">Как пользоваться</p>
+          <h2>От задачи к основанию</h2>
+          <ol>
+            <li>Найдите тему или рабочий процесс.</li>
+            <li>Откройте документ и проверьте действующую редакцию.</li>
+            <li>Зафиксируйте применённую норму в задаче или решении.</li>
+          </ol>
+          <p>Краткие пояснения помогают ориентироваться, но не заменяют официальный текст и правовую оценку конкретной ситуации.</p>
+          <a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Официальный портал правовой информации <span aria-hidden="true">&nearr;</span></a>
+        </aside>
+
+        <div class="knowledge-list" id="knowledge-list">
+          <article class="law-entry" data-category="management residents" data-search="жилищный кодекс управление домом общее собрание собственники плата лицензия">
+            <div class="law-entry-head"><span>Основной документ</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Жилищный кодекс Российской Федерации</h2>
+            <p>Базовые правила управления многоквартирными домами, общего имущества, платы за помещение, общих собраний и лицензирования управляющих организаций.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Карточка дома, лицевые счета, решения собственников, роли старшего по дому.</dd></div></dl>
+            <div class="law-links">
+              <a href="https://pravo.gov.ru/proxy/ips/?docbody=&amp;nd=102090645" target="_blank" rel="noopener noreferrer">Официальный текст</a>
+              <a href="https://www.consultant.ru/document/cons_doc_LAW_51057/" target="_blank" rel="noopener noreferrer">Удобная навигация</a>
+            </div>
+          </article>
+
+          <article class="law-entry" data-category="management" data-search="491 общее имущество содержание состав осмотр дом">
+            <div class="law-entry-head"><span>Общее имущество</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Правила содержания общего имущества, постановление № 491</h2>
+            <p>Определяют состав общего имущества и общие требования к его содержанию, осмотрам и распределению расходов.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Паспорт дома, перечень объектов, плановые работы и акты выполнения.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_62293/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="management" data-search="290 минимальный перечень услуги работы содержание ремонт">
+            <div class="law-entry-head"><span>Работы по дому</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Минимальный перечень работ и услуг, постановление № 290</h2>
+            <p>Задаёт основу обязательных работ, необходимых для надлежащего содержания общего имущества.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Каталог работ, планирование, чек-листы мастеров и отчётность по дому.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_144804/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="management residents" data-search="416 управление многоквартирный дом аварийная диспетчерская заявка сроки">
+            <div class="law-entry-head"><span>Работа управляющей организации</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Правила управления МКД, постановление № 416</h2>
+            <p>Регулируют организацию управления домом, аварийно-диспетчерское обслуживание, учёт обращений и взаимодействие с жителями.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Диалоги MAX, заявки, диспетчеризация, сроки и история действий.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_146444/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="residents payments" data-search="354 коммунальные услуги начисление качество перерасчет прибор учета оплата">
+            <div class="law-entry-head"><span>Коммунальные услуги</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Правила предоставления коммунальных услуг, постановление № 354</h2>
+            <p>Охватывают расчёт платы за коммунальные услуги, качество услуг, показания приборов учёта и основания для перерасчёта.</p>
+            <dl><div><dt>В AlexOS</dt><dd>История начислений, обращения по качеству и будущие сценарии перерасчёта.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_114247/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="data management" data-search="209-фз гис жкх раскрытие информация размещение система">
+            <div class="law-entry-head"><span>ГИС ЖКХ</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Федеральный закон № 209-ФЗ о ГИС ЖКХ</h2>
+            <p>Устанавливает основы работы государственной информационной системы ЖКХ и обязанности по размещению предусмотренной законом информации.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Контроль полноты данных, подготовка выгрузок и журнал публикаций.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_165810/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="residents" data-search="59-фз обращения граждан ответ заявление жалоба государственный орган">
+            <div class="law-entry-head"><span>Обращения</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Федеральный закон № 59-ФЗ об обращениях граждан</h2>
+            <p>Общий порядок рассмотрения обращений государственными и иными указанными в законе субъектами. Для обращений в управляющую организацию применимость и сроки нужно проверять вместе со специальными нормами ЖКХ и договором управления.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Классификация обращений, контроль ответа и сохранение истории переписки.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_59999/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="data residents" data-search="152-фз персональные данные согласие защита обработка телефон адрес лицевой счет">
+            <div class="law-entry-head"><span>Персональные данные</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Федеральный закон № 152-ФЗ о персональных данных</h2>
+            <p>Определяет требования к основаниям обработки, объёму, защите и прекращению обработки персональных данных.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Авторизация через MAX, привязка лицевых счетов, разграничение прав и закрытые финансовые сведения.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_61801/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="payments" data-search="54-фз касса ккт чек фискальный накопитель расчет наличные карта">
+            <div class="law-entry-head"><span>Касса и чеки</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Федеральный закон № 54-ФЗ о применении ККТ</h2>
+            <p>Регулирует применение контрольно-кассовой техники при расчётах, формирование кассовых чеков и передачу фискальных данных.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Рабочее место кассира, будущая фискализация, электронный чек и контроль результата операции.</dd></div></dl>
+            <div class="law-links"><a href="https://www.nalog.gov.ru/rn42/related_activities/registries/fiscaloperators/" target="_blank" rel="noopener noreferrer">Раздел ФНС о ККТ</a><a href="https://www.consultant.ru/document/cons_doc_LAW_42359/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="data control" data-search="63-фз электронная подпись эцп документ акт согласование">
+            <div class="law-entry-head"><span>Электронные документы</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Федеральный закон № 63-ФЗ об электронной подписи</h2>
+            <p>Определяет виды электронной подписи и условия признания электронных документов подписанными.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Будущее согласование актов, подтверждение решений и юридически значимый документооборот.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_112701/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+
+          <article class="law-entry" data-category="control management" data-search="248-фз контроль надзор проверка предписание профилактика риск">
+            <div class="law-entry-head"><span>Контроль и надзор</span><time datetime="2026-11-16">проверено 16.11.2026</time></div>
+            <h2>Федеральный закон № 248-ФЗ о государственном контроле</h2>
+            <p>Общий порядок государственного и муниципального контроля, профилактических и контрольных мероприятий.</p>
+            <dl><div><dt>В AlexOS</dt><dd>Реестр проверок, поручения, доказательства выполнения и контроль сроков.</dd></div></dl>
+            <div class="law-links"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Проверить на pravo.gov.ru</a><a href="https://www.consultant.ru/document/cons_doc_LAW_358750/" target="_blank" rel="noopener noreferrer">Открыть текст</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="knowledge-next" aria-labelledby="knowledge-next-title">
+        <div><p class="eyebrow">Связанные разделы</p><h2 id="knowledge-next-title">Не только читать, но и применять</h2></div>
+        <div class="knowledge-actions">
+          <a href="quiz.html">Квиз по законодательству <span aria-hidden="true">&rarr;</span></a>
+          <a href="updates.html">История развития AlexOS <span aria-hidden="true">&rarr;</span></a>
+          <a href="residents.html">Памятка для жителей <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+      <div class="footer-brand"><a class="brand" href="index.html"><span>Alex</span><strong>OS</strong></a><p>Цифровой помощник для спокойной и понятной работы с домом.</p></div>
+      <div><p class="footer-label">Справочник</p><a href="knowledge.html">База знаний</a></div>
+      <div><p class="footer-label">Практика</p><a href="quiz.html">Квиз ЖКХ</a></div>
+      <div><p class="footer-label">Официальный источник</p><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">pravo.gov.ru</a></div>
+      <p class="copyright">&copy; 2026 AlexOS. Справочник не заменяет официальный текст документа и правовую консультацию.</p>
+    </footer>
+  </body>
+</html>
