@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Интерактивная 3D-карта AlexOS: дома, жители, обращения, работы, платежи, документы и законодательство в одной системе.">
+    <meta name="theme-color" content="#030711">
+    <title>Карта AlexOS | Интерактивная система</title>
+    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="analytics-consent.css">
+    <script type="module" src="explore.js"></script>
+    <script src="metrika-consent.js" defer></script>
+  </head>
+  <body class="atlas-page">
+    <header class="atlas-header">
+      <a class="atlas-brand" href="index.html" aria-label="AlexOS, на главную"><span>Alex</span><strong>OS</strong></a>
+      <div class="atlas-location"><span>Интерактивная карта</span><b>Экосистема управления домами</b></div>
+      <a class="atlas-back" href="index.html"><span aria-hidden="true">&larr;</span> На сайт</a>
+    </header>
+
+    <main class="atlas-shell">
+      <div id="atlas-scene" class="atlas-scene" aria-hidden="true"></div>
+
+      <section class="atlas-intro" aria-labelledby="atlas-title">
+        <p>Живая карта системы</p>
+        <h1 id="atlas-title">Всё связано</h1>
+        <span id="atlas-subtitle">От сообщения жителя до выполненной работы и истории дома</span>
+      </section>
+
+      <div class="atlas-modes" role="group" aria-label="Режим карты">
+        <button class="active" type="button" data-mode="system">Система</button>
+        <button type="button" data-mode="house">Дом</button>
+      </div>
+
+      <aside class="atlas-detail" id="atlas-detail" aria-live="polite" hidden>
+        <button class="atlas-detail-close" id="atlas-detail-close" type="button" aria-label="Закрыть карточку">&times;</button>
+        <p id="atlas-detail-kicker">Раздел AlexOS</p>
+        <h2 id="atlas-detail-title">Обращения</h2>
+        <div class="atlas-detail-path" id="atlas-detail-path"></div>
+        <p id="atlas-detail-copy"></p>
+        <a id="atlas-detail-link" href="index.html">Открыть раздел <span aria-hidden="true">&rarr;</span></a>
+      </aside>
+
+      <nav class="atlas-dock" id="atlas-dock" aria-label="Разделы интерактивной карты"></nav>
+
+      <div class="atlas-loading" id="atlas-loading" role="status">
+        <span></span>
+        <b>Собираем карту AlexOS</b>
+      </div>
+
+      <section class="atlas-fallback" id="atlas-fallback" hidden>
+        <p>Трёхмерная карта недоступна на этом устройстве.</p>
+        <a href="knowledge.html">Открыть базу знаний</a>
+        <a href="basics.html">ЖКХ простыми словами</a>
+        <a href="updates.html">История развития</a>
+      </section>
+    </main>
+  </body>
+</html>
