@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="История развития AlexOS по дням: выпущенные изменения, текущие направления и ближайшие планы.">
     <title>История изменений | AlexOS</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261117-menu">
     <link rel="stylesheet" href="updates.css">
     <link rel="stylesheet" href="analytics-consent.css">
     <script src="metrika-consent.js" defer></script>
@@ -15,8 +15,14 @@
       <a class="brand" href="index.html" aria-label="AlexOS, на главную"><span>Alex</span><strong>OS</strong></a>
       <nav class="site-nav" aria-label="Основная навигация">
         <a href="residents.html">Как обратиться</a>
-        <a href="basics.html">ЖКХ просто</a>
-        <a href="knowledge.html">База знаний</a>
+        <details class="nav-dropdown">
+          <summary>Полезное</summary>
+          <div class="nav-dropdown-menu">
+            <a href="basics.html">ЖКХ просто</a>
+            <a href="knowledge.html">База знаний</a>
+            <a href="explore.html">3D-карта</a>
+          </div>
+        </details>
         <a href="updates.html" aria-current="page">История изменений</a>
         <a href="index.html#about">Возможности</a>
         <a href="index.html#contacts">Контакты</a>
@@ -58,6 +64,7 @@
                 <li><strong>Два режима просмотра.</strong> Общая карта объясняет связи между рабочими направлениями, а режим дома показывает крышу, отопление, воду, подъезд и двор.</li>
                 <li><strong>Интерактивные узлы.</strong> Каждый объект открывает краткое пояснение и ведёт в подходящий публичный раздел сайта.</li>
                 <li><strong>Работает на телефоне и компьютере.</strong> Карту можно вращать, приближать и открывать касанием; для устройств без трёхмерной графики предусмотрены обычные ссылки.</li>
+                <li><strong>Навигация стала короче.</strong> Разделы «ЖКХ просто», «База знаний» и «3D-карта» объединены в одно выпадающее меню «Полезное» на всех публичных страницах.</li>
               </ul>
               <p class="updates-muted">Это публичный навигационный эксперимент. Он не меняет рабочий кабинет, права доступа, расчёты, кассу или обработку платежей.</p>
             </section>

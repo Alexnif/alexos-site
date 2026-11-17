@@ -6,7 +6,7 @@
     <meta name="description" content="Возможности AlexOS: обращения, голосовые и фотографии в MAX, личные выписки и сроки оплаты, заявки и рабочий кабинет сотрудников. Расчёт кассира без проведения платежа. ККТ и Платосфера готовятся к подключению.">
     <title>AlexOS | Цифровой помощник для жителей</title>
     <link rel="preload" as="image" href="assets/alexos-hero-future.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261117-menu">
     <link rel="stylesheet" href="analytics-consent.css">
     <script src="statistics.js" defer></script>
     <script src="metrika-consent.js" defer></script>
@@ -18,11 +18,16 @@
       </a>
       <nav class="site-nav" aria-label="Основная навигация">
         <a href="residents.html">Как обратиться</a>
-        <a href="basics.html">ЖКХ просто</a>
-        <a href="knowledge.html">База знаний</a>
+        <details class="nav-dropdown">
+          <summary>Полезное</summary>
+          <div class="nav-dropdown-menu">
+            <a href="basics.html">ЖКХ просто</a>
+            <a href="knowledge.html">База знаний</a>
+            <a href="explore.html">3D-карта</a>
+          </div>
+        </details>
         <a href="doctors.html">Для врачей</a>
         <a href="updates.html">История изменений</a>
-        <a href="explore.html">3D-карта</a>
         <a href="#contacts">Контакты</a>
         <a href="requisites.html">Реквизиты</a>
       </nav>
