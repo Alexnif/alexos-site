@@ -5,7 +5,27 @@
   const button = document.getElementById("confirm");
   const intro = document.getElementById("intro");
   const heading = document.getElementById("heading");
+  const botUrl = "https://max.ru/id4246008141_bot";
   const fail = message => {status.textContent = message; request.hidden = true; intro.hidden = false;};
+  const finish = () => {
+    status.textContent = "Вход подтверждён. Возвращаемся в MAX…";
+    request.hidden = true;
+    try {
+      if (typeof window.WebApp?.disableClosingConfirmation === "function") {
+        window.WebApp.disableClosingConfirmation();
+      }
+      if (typeof window.WebApp?.openMaxLink === "function") {
+        window.WebApp.openMaxLink(botUrl);
+        return;
+      }
+    } catch (_) {
+      // Keep the success screen available if an older MAX client rejects navigation.
+    }
+    try {window.close();} catch (_) {}
+    window.setTimeout(() => {
+      status.textContent = "Вход подтверждён. Можно вернуться к рабочему кабинету.";
+    }, 800);
+  };
   const initData = window.WebApp?.initData;
   // This only chooses the screen. The server still verifies the signed launch.
   let start;
@@ -64,7 +84,7 @@
     button.disabled = true;
     try {
       await call("confirm", {confirm: true});
-      fail("Вход подтверждён. Вернитесь к рабочему кабинету на компьютере.");
+      finish();
     } catch (error) {
       fail(error.message || "Не удалось подтвердить вход. Создайте новый QR.");
     }
